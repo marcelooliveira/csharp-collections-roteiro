@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A41MaisRelacionamento
+namespace A51Sets
 {
     class Curso
     {
@@ -71,7 +71,8 @@ namespace A41MaisRelacionamento
 
         public override string ToString()
         {
-            return $"[Curso: {nome}, tempo total: {TempoTotal}, aulas: {string.Join(",", aulas)}]";
+            IEnumerable<string> aulasString = aulas.Select(a => a.ToString());
+            return $"[Curso: {nome}, tempo total: {TempoTotal}, aulas: {string.Join(",", aulasString)}]";
         }
     }
 }
