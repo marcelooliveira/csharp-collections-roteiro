@@ -23,6 +23,9 @@ namespace QualCollectionUsar
             {
                 Console.WriteLine(aluno);
             }
+
+            //alunos.Count();
+            //alunos[2];
         }
     }
 }
