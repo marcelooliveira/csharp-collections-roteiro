@@ -14,10 +14,20 @@ namespace A13ListasDeObjetos
             Aula a2 = new Aula("Listas de objetos", 15);
             Aula a3 = new Aula("Relacionamento de listas e objetos", 13);
 
-            List<Aula> aulas = new List<Aula>();
-            aulas.Add(a1);
-            aulas.Add(a2);
-            aulas.Add(a3);
+            //List<Aula> aulas = new List<Aula>();
+            //aulas.Add(a1);
+            //aulas.Add(a2);
+            //aulas.Add(a3);
+
+            //A inicialização acima vai ser simplificada abaixo
+
+            List<Aula> aulas = new List<Aula>
+            {
+                a1,
+                a2,
+                a3
+            };
+
             //a próxima linha gera um erro de compilação!
             //aulas.Add("Equals e HashCode");
 

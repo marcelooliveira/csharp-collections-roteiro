@@ -14,10 +14,19 @@ namespace A12Listas
             string aula2 = "Modelando a classe Aula";
             string aula3 = "Trabalhando com Cursos e Sets";
 
-            List<string> aulas = new List<string>();
-            aulas.Add(aula1);
-            aulas.Add(aula2);
-            aulas.Add(aula3);
+            //List<string> aulas = new List<string>();
+            //aulas.Add(aula1);
+            //aulas.Add(aula2);
+            //aulas.Add(aula3);
+
+            //A inicialização acima vai ser simplificada abaixo
+
+            List<string> aulas = new List<string>
+            {
+                aula1,
+                aula2,
+                aula3
+            };
 
             //não imprime os itens!
             Console.WriteLine(aulas);
