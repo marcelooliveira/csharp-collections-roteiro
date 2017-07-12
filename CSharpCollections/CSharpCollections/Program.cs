@@ -36,6 +36,10 @@ namespace CSharpCollections
             string primeiraAula = aulas[0];
             Console.WriteLine($"A primeira aula é: {primeiraAula}");
 
+            string ultimaAula = aulas[aulas.Length - 1];
+            Console.WriteLine($"A últimaAula aula é: {ultimaAula}");
+
+
             //removendo o último elemento (redimensionando o array)
             Array.Resize(ref aulas, aulas.Length - 1);
             Console.WriteLine();
