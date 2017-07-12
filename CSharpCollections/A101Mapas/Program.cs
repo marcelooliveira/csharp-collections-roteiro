@@ -57,6 +57,11 @@ namespace A101Mapas
             Console.WriteLine("Quem é o aluno com matrícula 5618?");
             Aluno aluno = csharpColecoes.BuscaMatriculado(5618);
             Console.WriteLine("aluno: " + aluno);
+
+            //A linha abaixo gera um erro,
+            //pois a chave aluno.NumeroMatricula não é única
+            //no dicionário:
+            //csharpColecoes.Matricula(a4); 
         }
     }
 }
