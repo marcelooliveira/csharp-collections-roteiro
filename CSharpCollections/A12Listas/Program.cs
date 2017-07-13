@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace A12Listas
 {
@@ -63,6 +60,9 @@ namespace A12Listas
             Console.WriteLine($"tamanho: {aulas.Count}");
 
             Console.WriteLine();
+
+            aulas.ForEach(PercorrerAula);
+
             aulas.ForEach(aula =>
             {
                 Console.WriteLine("percorrendo:");
@@ -72,10 +72,16 @@ namespace A12Listas
             aulas.Add("Aumentando nosso conhecimento");
             ImprimeAulas(aulas);
 
-            aulas.Sort((x, y) => x.CompareTo(y));
+            aulas.Sort();
             Console.WriteLine();
             Console.WriteLine("Depois de ordenado:");
             ImprimeAulas(aulas);
+        }
+
+        private static void PercorrerAula(string aula)
+        {
+            Console.WriteLine("percorrendo:");
+            Console.WriteLine($"Aula: {aula}");
         }
 
         private static void ImprimeAulas(List<string> aulas)

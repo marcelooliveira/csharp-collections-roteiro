@@ -49,10 +49,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Array.md" />
+    <None Include="Slides\Array.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Array.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
