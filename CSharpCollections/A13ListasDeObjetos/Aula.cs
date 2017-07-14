@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace A13ListasDeObjetos
 {
-    class Aula : IComparable
+    class Aula
     {
         private string titulo;
         private int tempo;
@@ -32,12 +32,6 @@ namespace A13ListasDeObjetos
         public override string ToString()
         {
             return $"[Aula: {this.titulo}, {this.tempo} minutos]";
-        }
-
-        public int CompareTo(object obj)
-        {
-            Aula that = obj as Aula;
-            return this.titulo.CompareTo(that.titulo);
         }
     }
 

@@ -22,11 +22,11 @@ namespace A13ListasDeObjetos
             //A inicialização acima vai ser simplificada abaixo
 
             List<Aula> aulas = new List<Aula>
-            {
-                a1,
-                a2,
-                a3
-            };
+             {
+                 a1,
+                 a2,
+                 a3
+             };
 
             //a próxima linha gera um erro de compilação!
             //aulas.Add("Equals e HashCode");
@@ -43,12 +43,12 @@ namespace A13ListasDeObjetos
             //Falha ao comparar dois elementos na matriz. --->System.ArgumentException: 
             //Pelo menos um objeto deve implementar IComparable.
 
-           ImprimeAulas(aulas);
+            //ImprimeAulas(aulas);
 
-            //vamos ordenar de outro jeito agora
-            aulas.Sort((x, y) => x.Tempo.CompareTo(y.Tempo));
+            // //vamos ordenar de outro jeito agora
+            // aulas.Sort((x, y) => x.Tempo.CompareTo(y.Tempo));
 
-            ImprimeAulas(aulas);
+            // ImprimeAulas(aulas);
 
         }
 
