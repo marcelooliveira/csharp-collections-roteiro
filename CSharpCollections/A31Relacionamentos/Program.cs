@@ -20,27 +20,27 @@ namespace A31Relacionamentos
             //    Console.WriteLine(aula);
             //}
 
-            ////Ensinando que aulas e csharpColecoes.Aulas são o mesmo objeto
+            //Ensinando que aulas e csharpColecoes.Aulas são o mesmo objeto
             //aulas.Add(new Aula("Trabalhando com Listas", 21));
             //ImprimeAulas(aulas);
             //ImprimeAulas(csharpColecoes.Aulas); //mostra o mesmo que o anterior, ou seja, é o mesmo objeto!
             //Console.WriteLine(aulas == csharpColecoes.Aulas); //São iguais mesmo? Vamos verificar!
 
             ////Ensinando a encapsular e mover método de adição de elemento na classe Curso
-            //csharpColecoes.Adiciona(new Aula("Trabalhando com Listas", 21));
-            //ImprimeAulas(csharpColecoes.Aulas);
+            csharpColecoes.Adiciona(new Aula("Trabalhando com Listas", 21));
+            ImprimeAulas(csharpColecoes.Aulas);
 
             ////Ensinando que os dois métodos fazem a mesma coisa
             //csharpColecoes.Aulas.Add(new Aula("Trabalhando com Listas", 21));
             //csharpColecoes.Adiciona(new Aula("Trabalhando com Listas", 21));
             //ImprimeAulas(csharpColecoes.Aulas);
 
-            
+
             ////Ensinando a não permitir adição de aula fora da classe Curso
             //csharpColecoes.Aulas.Add(new Aula("Trabalhando com Listas", 21));
             //A linha acima produz: Exceção Sem Tratamento: System.NotSupportedException: Coleção é somente leitura.
             //mas a linha abaixo funciona!
-            csharpColecoes.Adiciona(new Aula("Trabalhando com Listas", 21));
+            csharpColecoes.Adiciona(new Aula("Trabalhando com ReadOnlyCollection", 7));
             ImprimeAulas(csharpColecoes.Aulas);
         }
 

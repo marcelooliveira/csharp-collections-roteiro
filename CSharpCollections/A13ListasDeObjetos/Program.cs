@@ -28,7 +28,7 @@ namespace A13ListasDeObjetos
                  a3
              };
 
-            //a próxima linha gera um erro de compilação!
+            ////a próxima linha gera um erro de compilação!
             //aulas.Add("Equals e HashCode");
 
             foreach (var aula in aulas)
@@ -43,12 +43,12 @@ namespace A13ListasDeObjetos
             //Falha ao comparar dois elementos na matriz. --->System.ArgumentException: 
             //Pelo menos um objeto deve implementar IComparable.
 
-            //ImprimeAulas(aulas);
+            ImprimeAulas(aulas);
 
-            // //vamos ordenar de outro jeito agora
-            // aulas.Sort((x, y) => x.Tempo.CompareTo(y.Tempo));
+            //vamos ordenar de outro jeito agora
+            aulas.Sort((este, outro) => este.Tempo.CompareTo(outro.Tempo));
 
-            // ImprimeAulas(aulas);
+            ImprimeAulas(aulas);
 
         }
 

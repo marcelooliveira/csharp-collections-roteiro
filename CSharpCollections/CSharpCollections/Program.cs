@@ -64,6 +64,12 @@ namespace CSharpCollections
             Console.WriteLine();
             Console.WriteLine("Depois de ordenado:");
             ImprimeAulas(aulas);
+
+            var copia = new string[aulas.Length - 1];
+            Array.Copy(aulas, 1, copia, 0, aulas.Length - 1);
+            aulas = copia;
+            ImprimeAulas(aulas);
+
         }
 
         private static void ImprimeAulas(string[] aulas)

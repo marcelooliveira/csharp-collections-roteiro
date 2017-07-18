@@ -38,6 +38,11 @@ namespace A31Relacionamentos
 
         public Curso(string nome, string instrutor)
         {
+            if (string.IsNullOrEmpty(nome))
+                throw new ArgumentException();
+            if (string.IsNullOrEmpty(instrutor))
+                throw new ArgumentException();
+
             this.nome = nome;
             this.instrutor = instrutor;
         }
