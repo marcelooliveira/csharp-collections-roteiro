@@ -16,36 +16,33 @@ namespace A81OutrosSetsEIterators
             csharpColecoes.Adiciona(new Aula("Criando uma Aula", 20));
             csharpColecoes.Adiciona(new Aula("Modelando com Coleções", 24));
 
-            Aluno a1 = new Aluno("Vanessa Tonini", 34672);
-            Aluno a2 = new Aluno("Ana Losnak", 5617);
-            Aluno a3 = new Aluno("Rafael Nercessian", 17645);
-
-            csharpColecoes.Matricula(a1);
-            csharpColecoes.Matricula(a2);
-            csharpColecoes.Matricula(a3);
-
-            Console.WriteLine("Todos os alunos matriculados: ");
-            ISet<Aluno> alunos = csharpColecoes.Alunos;
-
-            foreach (var aluno in alunos)
+            foreach (var aula in csharpColecoes.Aulas)
             {
-                Console.WriteLine(aluno);
+                Console.WriteLine(aula);
             }
 
-            var enumerador = alunos.GetEnumerator();
-            //enumerador.MoveNext(); //mostrar este método, que retorna true se houve um próximo
+            var enumerador = csharpColecoes.Aulas.GetEnumerator();
+            Console.WriteLine("Aula atual: " + enumerador.Current);
 
-            Aluno alunoAtual = enumerador.Current;
-            if (alunoAtual != null)
+            while (enumerador.MoveNext())
             {
-                while (enumerador.MoveNext())
-                {
-                    Console.WriteLine(alunoAtual);
-                }
+                Console.WriteLine(enumerador.Current);
             }
 
-            //enumerador.MoveNext();
-            //Aluno depoisDoUltimo = enumerador.Current;
+            Console.WriteLine("Depois da última: " + enumerador.Current);
+
+            enumerador.Reset();
+            while (enumerador.MoveNext())
+            {
+                Console.WriteLine(enumerador.Current);
+            }
+
+            enumerador.Reset();
+            while (enumerador.MoveNext())
+            {
+                csharpColecoes.Adiciona(new Aula("Conclusão", 3)); //habilitando essa linha obtemos InvalidOperationException
+                Console.WriteLine(enumerador.Current);
+            }
         }
     }
 }

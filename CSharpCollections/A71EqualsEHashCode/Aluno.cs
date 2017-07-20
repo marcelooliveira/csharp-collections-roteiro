@@ -39,13 +39,13 @@ namespace A71EqualsEHashCode
         public override bool Equals(object obj)
         {
             Aluno that = obj as Aluno;
-            return that.nome.Equals(that.nome);
+            return this.nome.Equals(that.nome);
         }
 
-        public override int GetHashCode()
-        {
-            //return this.nome[0];
-            return this.nome.GetHashCode();
-        }
+        //public override int GetHashCode()
+        //{
+        //    //return this.nome[0];
+        //    return this.nome.GetHashCode();
+        //}
     }
 }
