@@ -29,8 +29,16 @@ namespace A101Mapas
 
         internal void Matricula(Aluno aluno)
         {
+            // adiciona no Set de alunos
             this.alunos.Add(aluno);
+            // cria a relação no Dictionary
             this.matriculaParaAluno.Add(aluno.NumeroMatricula, aluno);
+        }
+
+        internal void SubstituiMatricula(Aluno aluno)
+        {
+            this.alunos.Add(aluno);
+            this.matriculaParaAluno[aluno.NumeroMatricula] = aluno;
         }
 
         ////primeira versão
@@ -46,16 +54,18 @@ namespace A101Mapas
         //    throw new KeyNotFoundException("Matricula não encontrada: " + numero);
         //}
 
+        //segunda versão
+        //internal Aluno BuscaMatriculado(int numero)
+        //{
+        //    return this.matriculaParaAluno[numero];
+        //}
+
+        //terceira versão
         internal Aluno BuscaMatriculado(int numero)
         {
-            if (this.matriculaParaAluno.ContainsKey(numero))
-            {
-                return this.matriculaParaAluno[numero];
-            }
-            else
-            {
-                throw new KeyNotFoundException("Matricula não encontrada: " + numero);
-            }
+            Aluno result = null;
+            this.matriculaParaAluno.TryGetValue(numero, out result);
+            return result;
         }
 
         //A aula começa com List, depois muda para IList e ReadOnlyCollection
@@ -93,6 +103,7 @@ namespace A101Mapas
         {
             this.aulas.Add(aula);
         }
+
 
         //public int TempoTotal
         //{
