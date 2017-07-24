@@ -11,19 +11,19 @@ namespace QualCollectionUsar
     {   
         static void Main(string[] args)
         {
-            Collection<Aluno> alunos = new Collection<Aluno>();
+            List<Aluno> alunos = new List<Aluno>();
             Aluno a1 = new Aluno("Vanessa Tonini", 34672);
             Aluno a2 = new Aluno("Ana Losnak", 5617);
             Aluno a3 = new Aluno("Rafael Nercessian", 17645);
             alunos.Add(a1);
             alunos.Add(a2);
             alunos.Add(a3);
-
             foreach (var aluno in alunos)
             {
                 Console.WriteLine(aluno);
             }
 
+            ///<image url="$(ProjectDir)\Slides\image.png" scale=""/>
             //alunos.Count();
             //alunos[2];
         }
