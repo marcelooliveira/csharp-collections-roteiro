@@ -17,6 +17,7 @@ namespace CSharpCollections
                 aula3
             };
 
+            ///<image url="$(ProjectDir)\Slides\aulas.jpg" scale=""/>
             //não imprime os itens!
             Console.WriteLine(aulas); //System.String[]
             // (colocar breakpoint) na linha anterior, investigar o objeto aulas
@@ -50,7 +51,6 @@ namespace CSharpCollections
             Console.WriteLine();
             Console.WriteLine("Quantidade: " + aulas.Length + " aulas");
             ImprimeAulas(aulas);
-
             //Adicionando uma nova posição no final do array
             Array.Resize(ref aulas, aulas.Length + 1);
             Console.WriteLine();
