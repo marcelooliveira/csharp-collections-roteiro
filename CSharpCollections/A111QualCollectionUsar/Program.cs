@@ -23,7 +23,8 @@ namespace QualCollectionUsar
                 Console.WriteLine(aluno);
             }
 
-            ///<image url="$(ProjectDir)\Slides\image.png" scale=""/>
+            Dictionary<string, int> dic = new Dictionary<string, int>();
+
             //alunos.Count();
             //alunos[2];
         }
