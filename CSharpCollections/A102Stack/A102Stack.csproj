@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E770328F-E997-403E-9854-A03B151B2E16}</ProjectGuid>
+    <ProjectGuid>{BA55B7D5-10E1-43CD-8E4A-374CD4780B34}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Aula10LinkedListStackQueue</RootNamespace>
-    <AssemblyName>Aula10LinkedListStackQueue</AssemblyName>
+    <RootNamespace>A102Stack</RootNamespace>
+    <AssemblyName>A102Stack</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,21 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="Slides\image1.png" />
-    <Content Include="Slides\image10.png" />
-    <Content Include="Slides\image2.png" />
-    <Content Include="Slides\image3.png" />
-    <Content Include="Slides\image4.png" />
-    <Content Include="Slides\image5.png" />
-    <Content Include="Slides\image6.png" />
-    <Content Include="Slides\image7.png" />
-    <Content Include="Slides\image8.png" />
-    <Content Include="Slides\image9.png" />
-    <Content Include="Slides\linked.png" />
-    <Content Include="Slides\linked2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

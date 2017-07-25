@@ -2,6 +2,10 @@
 
 namespace CSharpCollections
 {
+    /// <summary>
+    /// Image Comments:
+    /// https://github.com/TomSmartBishop/image-comments/raw/master/Output/ImageComments.vsix
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
