@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BA55B7D5-10E1-43CD-8E4A-374CD4780B34}</ProjectGuid>
+    <ProjectGuid>{148BD1F7-5842-4B6D-8A7E-BEDC06B5AE97}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>A102Stack</RootNamespace>
-    <AssemblyName>A102Stack</AssemblyName>
+    <RootNamespace>A103Queue</RootNamespace>
+    <AssemblyName>A103Queue</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,7 +49,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Slides\" />
+    <Content Include="Slides\queue1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
