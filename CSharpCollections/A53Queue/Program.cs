@@ -11,7 +11,6 @@ namespace A103Queue
         static Queue<string> pedagio = new Queue<string>();
         static void Main(string[] args)
         {
-
             //string veiculo = "van";
             //Console.WriteLine($"Entrou na fila: {veiculo}");
             //pedagio.Enqueue(veiculo);
