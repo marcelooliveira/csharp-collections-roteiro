@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A72SortedList
+namespace A71SortedList
 {
     class Program
     {
@@ -23,6 +23,8 @@ namespace A72SortedList
 
             foreach (var a in alunos)
                 Console.WriteLine(a);
+
+            ///<image url="$(ProjectDir)\Slides\image1.png" scale=""/>
         }
     }
 }
