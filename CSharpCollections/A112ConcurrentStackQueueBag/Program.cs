@@ -38,6 +38,10 @@ namespace A112ConcurrentStackQueueBag
 
             bag.Add("hello");
             bag.Add("world");
+
+            bag.TryPeek(out first);
+            bag.TryTake(out first);
+
         }
     }
 }
