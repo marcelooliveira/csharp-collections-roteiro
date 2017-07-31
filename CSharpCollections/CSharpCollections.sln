@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A82JaggedArrays", "A82Jagge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A111ConcurrentDictionary", "A111ConcurrentDictionary\A111ConcurrentDictionary.csproj", "{82169690-3996-49DE-B483-AD6090411F71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A112ConcurrentStackQueueBag", "A112ConcurrentStackQueueBag\A112ConcurrentStackQueueBag.csproj", "{63096DF9-4F08-40C7-94F8-A94513980442}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,10 @@ Global
 		{82169690-3996-49DE-B483-AD6090411F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82169690-3996-49DE-B483-AD6090411F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82169690-3996-49DE-B483-AD6090411F71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63096DF9-4F08-40C7-94F8-A94513980442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63096DF9-4F08-40C7-94F8-A94513980442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63096DF9-4F08-40C7-94F8-A94513980442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63096DF9-4F08-40C7-94F8-A94513980442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -162,5 +168,6 @@ Global
 		{2FE3E53E-F6F0-4033-A849-B140A0DFEF54} = {EC69CB75-89AF-4E0C-B9B5-6732CE2DA8C4}
 		{93C3E4B2-4627-4B13-A9C9-A035F1DE649A} = {C1BB18A4-2D71-4909-B725-2FB2EC4EAEC9}
 		{82169690-3996-49DE-B483-AD6090411F71} = {5BFEA0A2-1869-4B11-9CB1-6A463C4DF90C}
+		{63096DF9-4F08-40C7-94F8-A94513980442} = {5BFEA0A2-1869-4B11-9CB1-6A463C4DF90C}
 	EndGlobalSection
 EndGlobal
