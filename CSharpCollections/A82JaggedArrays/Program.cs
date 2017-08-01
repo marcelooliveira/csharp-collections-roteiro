@@ -10,31 +10,25 @@ namespace A82JaggedArrays
     {
         static void Main(string[] args)
         {
-            const int COPA_2014 = 0;
-            const int COPA_2010 = 1;
-            const int COPA_2006 = 2;
+            //string[] familias = new string[] { 2014, 2010, 2006 };
 
-            int[] copas = new int[] { 2014, 2010, 2006 };
+            string[][] familias = new string[3][];
 
-            string[][] resultados = new string[3][];
-
-            resultados[COPA_2014] = new string[] { "Alemanha", "Argentina", "Holanda" };
-            resultados[COPA_2010] = new string[] { "Espanha", "Holanda", "Alemanha" };
-            resultados[COPA_2006] = new string[] { "Itália", "França", "Alemanha" };
+            familias[0] = new string[] 
+            { "Fred", "Wilma", "Pedrita" };
+            familias[1] = new string[] 
+            { "Homer", "Marge", "Bart", "Lisa", "Maggie" };
+            familias[2] = new string[] 
+            { "Florinda", "Kiko" };
 
             //mostrar que aqui não são mostrados os detalhes
-            //foreach (var selecao in resultados)
-            //{
-            //    Console.WriteLine(selecao);
-            //}
 
-            for (int i = 0; i < resultados.Length; i++)
+            for (int i = 0; i < familias.Length; i++)
             {
-                var posicoes = resultados[i];
-                Console.Write(copas[i] + " ");
-                foreach (var selecao in posicoes)
+                var familia = familias[i];
+                foreach (var pessoa in familia)
                 {
-                    Console.Write(selecao + " ");
+                    Console.Write(pessoa + " ");
                 }
                 Console.WriteLine();
             }

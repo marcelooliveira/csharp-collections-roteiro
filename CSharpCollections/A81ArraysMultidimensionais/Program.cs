@@ -14,39 +14,38 @@ namespace A81ArraysMultidimensionais
         {
             ///<image url="$(ProjectDir)\Slides\image1.png" scale=""/>
 
-            var resultados = new string[]
-            {
-                "Alemanha", "Argentina", "Holanda",
-                "Espanha", "Holanda", "Alemanha",
-                "Itália", "França", "Alemanha"
-            };
+            //var resultados = new string[]
+            //{
+            //    "Alemanha", "Argentina", "Holanda",
+            //    "Espanha", "Holanda", "Alemanha",
+            //    "Itália", "França", "Alemanha"
+            //};
 
-            foreach (var item in resultados)
-            {
-                Console.WriteLine(item);
-            }
-
-
+            //foreach (var item in resultados)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
 
 
-            string[,] resultados = new string[3, 3];
-            resultados[0, 0] = "Alemanha";
-            resultados[0, 1] = "Argentina";
-            resultados[0, 2] = "Holanda";
 
-            resultados[1, 0] = "Espanha";
-            resultados[1, 1] = "Holanda";
-            resultados[1, 2] = "Alemanha";
+            //string[,] resultados = new string[3, 3];
+            //resultados[0, 0] = "Alemanha";
+            //resultados[0, 1] = "Argentina";
+            //resultados[0, 2] = "Holanda";
 
-            resultados[2, 0] = "Itália";
-            resultados[2, 1] = "França";
-            resultados[2, 2] = "Alemanha";
+            //resultados[1, 0] = "Espanha";
+            //resultados[1, 1] = "Holanda";
+            //resultados[1, 2] = "Alemanha";
 
-            foreach (var item in resultados)
-            {
-                Console.WriteLine(item);
-            }
+            //resultados[2, 0] = "Itália";
+            //resultados[2, 1] = "França";
+            //resultados[2, 2] = "Alemanha";
+
+            //foreach (var item in resultados)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
 
 
@@ -80,13 +79,14 @@ namespace A81ArraysMultidimensionais
             //    Console.WriteLine(selecao);
             //}
 
-            for (int copa = resultados.GetLowerBound(0); copa <= resultados.GetUpperBound(0); copa++)
+            for (int copa = resultados.GetLowerBound(0); 
+                copa <= resultados.GetUpperBound(0); 
+                copa++)
             {
                 Console.Write(copas[copa] + " ");
-                for (int posicao = resultados.GetLowerBound(1); posicao <= resultados.GetUpperBound(1); posicao++)
+                for (int posicao = resultados.GetLowerBound(1); 
+                    posicao <= resultados.GetUpperBound(1); posicao++)
                 {
-                    //Console.WriteLine(resultados[copa, posicao]);
-
                     Console.Write(resultados[copa, posicao] + " ");
                 }
                 Console.WriteLine();
