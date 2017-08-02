@@ -10,15 +10,15 @@ namespace CSharpCollections
     {
         static void Main(string[] args)
         {
-            string aula1 = "Conhecendo mais de listas";
-            string aula2 = "Modelando a classe Aula";
-            string aula3 = "Trabalhando com Cursos e Sets";
+            string aulaIntro = "Conhecendo mais de listas";
+            string aulaModelando = "Modelando a classe Aula";
+            string aulaSets = "Trabalhando com Cursos e Sets";
 
             string[] aulas = new string[]
             {
-                aula1,
-                aula2,
-                aula3
+                aulaIntro,
+                aulaModelando,
+                aulaSets
             };
 
             ///<image url="$(ProjectDir)\Slides\aulas.jpg" scale=""/>
@@ -44,7 +44,7 @@ namespace CSharpCollections
             string ultimaAula = aulas[aulas.Length - 1];
             Console.WriteLine($"A última aula é: {ultimaAula}");
 
-            aula1 = "Conhecendo mais de arrays"; //não altera o array!
+            aulaIntro = "Conhecendo mais de arrays"; //não altera o array!
             ImprimeAulas(aulas);
 
             aulas[0] = "Conhecendo mais de arrays"; //agora sim, altera o array!
