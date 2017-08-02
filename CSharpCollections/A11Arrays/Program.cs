@@ -11,7 +11,7 @@ namespace CSharpCollections
         static void Main(string[] args)
         {
             string aulaIntro = "Conhecendo mais de listas";
-            string aulaModelando = "Modelando a classe Aula";
+            string aulaModelando = "Modelando a Classe Aula";
             string aulaSets = "Trabalhando com Cursos e Sets";
 
             //predefinindo o tamanho do array entre colchetes,
@@ -59,6 +59,15 @@ namespace CSharpCollections
             aulas[0] = "Conhecendo mais de arrays"; //agora sim, altera o array!
             ImprimeAulas(aulas);
 
+            //procurando um elemento
+            Console.WriteLine($"aulaModelando está no índice {Array.IndexOf(aulas, "Modelando a Classe Aula")}");
+
+            Console.WriteLine("invertendo");
+            Array.Reverse(aulas);
+            ImprimeAulas(aulas);
+            Array.Reverse(aulas);
+
+
             //removendo o último elemento (redimensionando o array)
             Array.Resize(ref aulas, aulas.Length - 1);
             Console.WriteLine();
@@ -94,6 +103,9 @@ namespace CSharpCollections
             aulasCopiadas[0] = "pré-aula";
             aulas.CopyTo(aulasCopiadas, 1);
 
+            ImprimeAulas(aulasCopiadas);
+
+            Array.Clear(aulasCopiadas, 1, 2);
             ImprimeAulas(aulasCopiadas);
         }
 
