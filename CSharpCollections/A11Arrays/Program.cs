@@ -30,7 +30,7 @@ namespace CSharpCollections
                 aulaSets //índice 2
             };
 
-            ///<image url="$(ProjectDir)\Slides\aulas.jpg" scale=""/>
+            ///<image url="$(ProjectDir)\Slides\image1.png" scale=""/>
             //não imprime os itens!
             Console.WriteLine(aulas); //System.String[]
             // (colocar breakpoint) na linha anterior, investigar o objeto aulas
@@ -53,6 +53,8 @@ namespace CSharpCollections
             string ultimaAula = aulas[aulas.Length - 1];
             Console.WriteLine($"A última aula é: {ultimaAula}");
 
+            ///<image url="$(ProjectDir)\Slides\image2.png" scale=""/>
+
             aulaIntro = "Conhecendo mais de arrays"; //não altera o array!
             ImprimeAulas(aulas);
 
@@ -60,7 +62,7 @@ namespace CSharpCollections
             ImprimeAulas(aulas);
 
             //procurando um elemento
-            Console.WriteLine($"aulaModelando está no índice {Array.IndexOf(aulas, "Modelando a Classe Aula")}");
+            Console.WriteLine($"aulaModelando está no índice {Array.IndexOf(aulas, aulaModelando)}");
 
             Console.WriteLine("invertendo");
             Array.Reverse(aulas);
