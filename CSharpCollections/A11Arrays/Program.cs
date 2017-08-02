@@ -14,6 +14,13 @@ namespace CSharpCollections
             string aulaModelando = "Modelando a classe Aula";
             string aulaSets = "Trabalhando com Cursos e Sets";
 
+            //predefinindo o tamanho do array entre colchetes
+            //string[] aulas = new string[3];
+            //aulas[0] = aulaIntro;
+            //aulas[1] = aulaModelando;
+            //aulas[2] = aulaSets;
+
+            //definindo os elementos do array na inicialização
             string[] aulas = new string[]
             {
                 aulaIntro,
@@ -55,6 +62,7 @@ namespace CSharpCollections
             Console.WriteLine();
             Console.WriteLine("Quantidade: " + aulas.Length + " aulas");
             ImprimeAulas(aulas);
+
             //Adicionando uma nova posição no final do array
             Array.Resize(ref aulas, aulas.Length + 1);
             Console.WriteLine();
@@ -74,6 +82,17 @@ namespace CSharpCollections
             aulas = copia;
             ImprimeAulas(aulas);
 
+            var aulasClonadas = aulas.Clone() as string[];
+            aulasClonadas[0] = "primeira aula substituída";
+
+            ImprimeAulas(aulas);
+            ImprimeAulas(aulasClonadas);
+
+            var aulasCopiadas = new string[3];
+            aulasCopiadas[0] = "pré-aula";
+            aulas.CopyTo(aulasCopiadas, 1);
+
+            ImprimeAulas(aulasCopiadas);
         }
 
         private static void ImprimeAulas(string[] aulas)
@@ -84,5 +103,10 @@ namespace CSharpCollections
                 Console.WriteLine(aula);
             }
         }
+    }
+
+    class Aula
+    {
+
     }
 }
