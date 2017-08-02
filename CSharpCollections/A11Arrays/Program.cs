@@ -30,6 +30,8 @@ namespace CSharpCollections
                 aulaSets //índice 2
             };
 
+            ///<image url="$(ProjectDir)\Slides\screenshot_1.png" scale=""/>
+
             ///<image url="$(ProjectDir)\Slides\image1.png" scale=""/>
             //não imprime os itens!
             Console.WriteLine(aulas); //System.String[]
@@ -64,11 +66,12 @@ namespace CSharpCollections
             //procurando um elemento
             Console.WriteLine($"aulaModelando está no índice {Array.IndexOf(aulas, aulaModelando)}");
 
+            ///<image url="$(ProjectDir)\Slides\image3.png" scale=""/>
+
             Console.WriteLine("invertendo");
             Array.Reverse(aulas);
             ImprimeAulas(aulas);
             Array.Reverse(aulas);
-
 
             //removendo o último elemento (redimensionando o array)
             Array.Resize(ref aulas, aulas.Length - 1);
