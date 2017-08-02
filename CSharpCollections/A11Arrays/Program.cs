@@ -14,18 +14,20 @@ namespace CSharpCollections
             string aulaModelando = "Modelando a classe Aula";
             string aulaSets = "Trabalhando com Cursos e Sets";
 
-            //predefinindo o tamanho do array entre colchetes
+            //predefinindo o tamanho do array entre colchetes,
+            //e usamos a sintaxe de índices
             //string[] aulas = new string[3];
             //aulas[0] = aulaIntro;
             //aulas[1] = aulaModelando;
             //aulas[2] = aulaSets;
 
-            //definindo os elementos do array na inicialização
+            //definindo os elementos do array, usando sintaxe
+            //de inicialização
             string[] aulas = new string[]
             {
-                aulaIntro,
-                aulaModelando,
-                aulaSets
+                aulaIntro, //índice 0
+                aulaModelando, //índice 1
+                aulaSets //índice 2
             };
 
             ///<image url="$(ProjectDir)\Slides\aulas.jpg" scale=""/>
