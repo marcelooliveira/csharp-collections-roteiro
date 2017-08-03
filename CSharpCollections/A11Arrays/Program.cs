@@ -2,6 +2,7 @@
 
 namespace CSharpCollections
 {
+
     /// <summary>
     /// Image Comments:
     /// https://github.com/TomSmartBishop/image-comments/raw/master/Output/ImageComments.vsix
@@ -35,7 +36,7 @@ namespace CSharpCollections
             ///<image url="$(ProjectDir)\Slides\image1.png" scale=""/>
             //não imprime os itens!
             Console.WriteLine(aulas); //System.String[]
-            // (colocar breakpoint) na linha anterior, investigar o objeto aulas
+            //(colocar breakpoint) na linha anterior, investigar o objeto aulas
 
             //imprime os itens
             foreach (var aula in aulas)
@@ -45,7 +46,7 @@ namespace CSharpCollections
 
             //refatorando, temos um novo método:
             ImprimeAulas(aulas);
-            
+
             //contando elementos
             Console.WriteLine("Quantidade: " + aulas.Length + " aulas");
 
@@ -109,13 +110,17 @@ namespace CSharpCollections
             aulas.CopyTo(aulasCopiadas, 1);
 
             ImprimeAulas(aulasCopiadas);
-
+            
             Array.Clear(aulasCopiadas, 1, 2);
             ImprimeAulas(aulasCopiadas);
+
+            Console.WriteLine();
+
         }
 
         private static void ImprimeAulas(string[] aulas)
         {
+
             Console.WriteLine();
             foreach (var aula in aulas)
             {
