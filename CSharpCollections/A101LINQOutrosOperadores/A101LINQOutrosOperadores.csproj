@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1548CE8D-DE03-4DEF-98C0-4AEB3F8FAC21}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>CSharpCollections</RootNamespace>
-    <AssemblyName>CSharpCollections</AssemblyName>
+    <ProjectGuid>{F78A8FEE-D0D1-4291-86C2-66391940D343}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>A101LINQOutrosOperadores</RootNamespace>
+    <AssemblyName>A101LINQOutrosOperadores</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,9 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="AluraCodeSnippet.snippet" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,69 +10,87 @@ namespace A81ArraysMultidimensionais
 {
     class Program
     {
-        static ConcurrentDictionary<int, string> _dictionary =
-            new ConcurrentDictionary<int, string>();
-
         static void Main(string[] args)
         {
-            _dictionary.TryAdd(1, "hello");
-            _dictionary.TryAdd(2, "world");
+            ///<image url="$(ProjectDir)\Slides\image1.png" scale=""/>
 
-            PrintDictionary();
+            //var resultados = new string[]
+            //{
+            //    "Alemanha", "Argentina", "Holanda",
+            //    "Espanha", "Holanda", "Alemanha",
+            //    "Itália", "França", "Alemanha"
+            //};
 
-            var t1 = new Thread(new ThreadStart(A));
-            var t2 = new Thread(new ThreadStart(B));
-            var t3 = new Thread(new ThreadStart(C));
+            //foreach (var item in resultados)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            t1.Start();
-            t2.Start();
-            t3.Start();
 
-            t1.Join();
-            t2.Join();
-            t3.Join();
 
-            _dictionary.AddOrUpdate(7, "dog", (k, v) => v + "2"); //7, dog
-            _dictionary.AddOrUpdate(7, "dog", (k, v) => v + "2"); //7, dog2
-            PrintDictionary();
 
-            var cat = _dictionary.GetOrAdd(8, "cat"); //cat
-            cat = _dictionary.GetOrAdd(8, "fish"); //cat
-            PrintDictionary();
+            //string[,] resultados = new string[3, 3];
+            //resultados[0, 0] = "Alemanha";
+            //resultados[0, 1] = "Argentina";
+            //resultados[0, 2] = "Holanda";
 
-        }
+            //resultados[1, 0] = "Espanha";
+            //resultados[1, 1] = "Holanda";
+            //resultados[1, 2] = "Alemanha";
 
-        private static void PrintDictionary()
-        {
-            foreach (var item in _dictionary)
-                Console.WriteLine(item);
-            Console.WriteLine();
-        }
+            //resultados[2, 0] = "Itália";
+            //resultados[2, 1] = "França";
+            //resultados[2, 2] = "Alemanha";
 
-        static void A()
-        {
-            _dictionary.TryAdd(3, "foo");
-            Console.WriteLine("A()");
-            PrintDictionary();
+            //foreach (var item in resultados)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-        }
 
-        static void B()
-        {
-            var value = string.Empty;
-            _dictionary.TryRemove(1, out value);
-            Console.WriteLine("B()");
-            PrintDictionary();
 
-        }
 
-        static void C()
-        {
-            var value = string.Empty;
-            _dictionary.TryUpdate(2, "world2", "world3");
-            Console.WriteLine("C()");
-            PrintDictionary();
+            const int COPA_2014 = 0;
+            const int COPA_2010 = 1;
+            const int COPA_2006 = 2;
 
+            const int CAMPEAO = 0;
+            const int VICE = 1;
+            const int TERCEIRO = 2;
+
+            int[] copas = new int[] { 2014, 2010, 2006 };
+
+            string[,] resultados = new string[3, 3];
+
+            resultados[COPA_2014, CAMPEAO] = "Alemanha";
+            resultados[COPA_2014, VICE] = "Argentina";
+            resultados[COPA_2014, TERCEIRO] = "Holanda";
+
+            resultados[COPA_2010, CAMPEAO] = "Espanha";
+            resultados[COPA_2010, VICE] = "Holanda";
+            resultados[COPA_2010, TERCEIRO] = "Alemanha";
+
+            resultados[COPA_2006, CAMPEAO] = "Itália";
+            resultados[COPA_2006, VICE] = "França";
+            resultados[COPA_2006, TERCEIRO] = "Alemanha";
+
+            //foreach (var selecao in resultados)
+            //{
+            //    Console.WriteLine(selecao);
+            //}
+
+            for (int copa = resultados.GetLowerBound(0); 
+                copa <= resultados.GetUpperBound(0); 
+                copa++)
+            {
+                Console.Write(copas[copa] + " ");
+                for (int posicao = resultados.GetLowerBound(1); 
+                    posicao <= resultados.GetUpperBound(1); posicao++)
+                {
+                    Console.Write(resultados[copa, posicao] + " ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
