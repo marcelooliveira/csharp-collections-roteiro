@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A31Relacionamentos
+namespace A23Relacionamentos
 {
     class Aula : IComparable
     {

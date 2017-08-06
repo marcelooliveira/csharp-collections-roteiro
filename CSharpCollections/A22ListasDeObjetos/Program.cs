@@ -4,28 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A13ListasDeObjetos
+namespace A22ListasDeObjetos
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Aula a1 = new Aula("Revisitando listas", 21);
-            Aula a2 = new Aula("Listas de objetos", 15);
-            Aula a3 = new Aula("Relacionamento de listas e objetos", 13);
+            Aula aulaIntro = new Aula("Introdução às Coleções", 21);
+            Aula aulaModelando = new Aula("Modelando a Classe Aula", 15);
+            Aula aulaSets = new Aula("Trabalhando com Conjuntos", 13);
 
             //List<Aula> aulas = new List<Aula>();
-            //aulas.Add(a1);
-            //aulas.Add(a2);
-            //aulas.Add(a3);
+            //aulas.Add(aulaIntro);
+            //aulas.Add(aulaModelando);
+            //aulas.Add(aulaSets);
 
             //A inicialização acima vai ser simplificada abaixo
 
             List<Aula> aulas = new List<Aula>
              {
-                 a1,
-                 a2,
-                 a3
+                 aulaIntro,
+                 aulaModelando,
+                 aulaSets
              };
 
             ////a próxima linha gera um erro de compilação!
@@ -54,7 +54,7 @@ namespace A13ListasDeObjetos
 
         private static void ImprimeAulas(List<Aula> aulas)
         {
-            Console.WriteLine();
+            Console.Clear();
             foreach (var aula in aulas)
             {
                 Console.WriteLine(aula); //não exibe detalhes da aula, pois precisamos implementar ToString()

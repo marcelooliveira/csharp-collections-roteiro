@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace A12Listas
@@ -7,90 +8,87 @@ namespace A12Listas
     {
         static void Main(string[] args)
         {
-            string aula1 = "Conhecendo mais de listas";
-            string aula2 = "Modelando a classe Aula";
-            string aula3 = "Trabalhando com Cursos e Sets";
+            string aulaIntro = "Introdução às Coleções";
+            string aulaModelando = "Modelando a Classe Aula";
+            string aulaSets = "Trabalhando com Conjuntos";
 
-            //List<string> aulas = new List<string>();
-            //aulas.Add(aula1);
-            //aulas.Add(aula2);
-            //aulas.Add(aula3);
+            //List<string> aulas = new List<string>
+            //{
+            //    aulaIntro,
+            //    aulaModelando,
+            //    aulaSets
+            //};
 
-            //A inicialização acima vai ser simplificada abaixo
+            List<string> aulas = new List<string>();
+            aulas.Add(aulaIntro);
+            aulas.Add(aulaModelando);
+            aulas.Add(aulaSets);
 
-            List<string> aulas = new List<string>
-            {
-                aula1,
-                aula2,
-                aula3
-            };
+            Imprimir(aulas);
 
-            //não imprime os itens!
-            Console.WriteLine(aulas);
-            // (colocar breakpoint) na linha anterior, investigar o objeto aulas
+            Console.WriteLine("A primeira aula é " + aulas[0]);
+            Console.WriteLine("A primeira aula é " + aulas.First());
 
-            //imprime os itens
-            foreach (var aula in aulas)
-            {
-                Console.WriteLine(aula);
-            }
+            Console.WriteLine("A última aula é " + aulas[aulas.Count - 1]);
+            Console.WriteLine("A última aula é " + aulas.Last());
 
-            //removendo aula
-            aulas.RemoveAt(0);
+            aulas[0] = "Trabalhando com Listas";
+            Imprimir(aulas);
 
-            ImprimeAulas(aulas);
+            Console.WriteLine("A primeira aula 'Trabalhando' é: "
+                + aulas.First(aula => aula.Contains("Trabalhando")));
 
-            //imprimindo aulas com interpolação de string
-            Console.WriteLine();
-            foreach (var aula in aulas)
-            {
-                Console.WriteLine($"aula: {aula}");
-            }
+            Console.WriteLine("A última aula 'Trabalhando' é: "
+                + aulas.Last(aula => aula.Contains("Trabalhando")));
 
-            string primeiraAula = aulas[0];
-            Console.WriteLine($"A primeira aula é: {primeiraAula}");
+            Console.WriteLine("A primeira aula 'Conclusão' é: "
+                + aulas.FirstOrDefault(aula => aula.Contains("Conclusão")));
 
-            Console.WriteLine();
-            for (int i = 0; i < aulas.Count; i++)
-            {
-                Console.WriteLine($"aula {i}: {aulas[i]}");
-            }
+            aulas.Reverse();
+            Imprimir(aulas);
 
-            Console.WriteLine();
-            Console.WriteLine($"tamanho: {aulas.Count}");
+            aulas.Reverse();
+            Imprimir(aulas);
 
-            Console.WriteLine();
+            aulas.RemoveAt(aulas.Count - 1);
+            Imprimir(aulas);
 
-            aulas.ForEach(PercorrerAula);
+            aulas.Add("Conclusão");
+            Imprimir(aulas);
+
+            aulas.Sort();
+            Imprimir(aulas);
+
+            List<string> copia = aulas.GetRange(aulas.Count - 2, 2);
+            Imprimir(copia);
+
+            List<string> clone = new List<string>(aulas);
+            Imprimir(clone);
+
+            clone.RemoveRange(clone.Count - 2, 2);
+            Imprimir(clone);
+
+        }
+
+        private static void Imprimir(List<string> aulas)
+        {
+            Console.Clear();
+
+            //foreach (var aula in aulas)
+            //{
+            //    Console.WriteLine(aula);
+            //}
+
+            //for (int i = 0; i < aulas.Count; i++)
+            //{
+            //    Console.WriteLine(aulas[i]);
+            //}
 
             aulas.ForEach(aula =>
             {
-                Console.WriteLine("percorrendo:");
-                Console.WriteLine($"Aula: {aula}");
-            });
-
-            aulas.Add("Aumentando nosso conhecimento");
-            ImprimeAulas(aulas);
-
-            aulas.Sort();
-            Console.WriteLine();
-            Console.WriteLine("Depois de ordenado:");
-            ImprimeAulas(aulas);
-        }
-
-        private static void PercorrerAula(string aula)
-        {
-            Console.WriteLine("percorrendo:");
-            Console.WriteLine($"Aula: {aula}");
-        }
-
-        private static void ImprimeAulas(List<string> aulas)
-        {
-            Console.WriteLine();
-            foreach (var aula in aulas)
-            {
                 Console.WriteLine(aula);
-            }
+            });
+            Console.WriteLine();
         }
     }
 }

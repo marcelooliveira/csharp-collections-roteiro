@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A41MaisRelacionamento
+namespace A24MaisRelacionamento
 {
     class Program
     {

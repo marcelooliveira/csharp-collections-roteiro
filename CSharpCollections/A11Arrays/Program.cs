@@ -2,86 +2,83 @@
 
 namespace CSharpCollections
 {
-    /// <summary>
-    /// Image Comments:
-    /// https://github.com/TomSmartBishop/image-comments/raw/master/Output/ImageComments.vsix
-    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            string aula1 = "Conhecendo mais de listas";
-            string aula2 = "Modelando a classe Aula";
-            string aula3 = "Trabalhando com Cursos e Sets";
+            string aulaIntro = "Introdução às Coleções";
+            string aulaModelando = "Modelando a Classe Aula";
+            string aulaSets = "Trabalhando com Conjuntos";
 
-            string[] aulas = new string[]
-            {
-                aula1,
-                aula2,
-                aula3
-            };
+            //string[] aulas = new string[]
+            //{
+            //    aulaIntro,
+            //    aulaModelando,
+            //    aulaSets
+            //};
 
-            ///<image url="$(ProjectDir)\Slides\aulas.jpg" scale=""/>
-            //não imprime os itens!
-            Console.WriteLine(aulas); //System.String[]
-            // (colocar breakpoint) na linha anterior, investigar o objeto aulas
+            string[] aulas = new string[3];
+            aulas[0] = aulaIntro;
+            aulas[1] = aulaModelando;
+            aulas[2] = aulaSets;
 
-            //imprime os itens
-            foreach (var aula in aulas)
-            {
-                Console.WriteLine(aula);
-            }
+            Console.WriteLine(aulas);
 
-            //refatorando, temos um novo método:
-            ImprimeAulas(aulas);
-            
-            //contando elementos
-            Console.WriteLine("Quantidade: " + aulas.Length + " aulas");
+            Imprimir(aulas);
 
-            string primeiraAula = aulas[0];
-            Console.WriteLine($"A primeira aula é: {primeiraAula}");
+            Console.WriteLine(aulas[0]);
+            Console.WriteLine(aulas[aulas.Length - 1]);
 
-            string ultimaAula = aulas[aulas.Length - 1];
-            Console.WriteLine($"A última aula é: {ultimaAula}");
+            aulaIntro = "Trabalhando com Arrays";
+            Imprimir(aulas);
 
-            aula1 = "Conhecendo mais de arrays"; //não altera o array!
-            ImprimeAulas(aulas);
+            aulas[0] = "Trabalhando com Arrays";
+            Imprimir(aulas);
 
-            aulas[0] = "Conhecendo mais de arrays"; //agora sim, altera o array!
-            ImprimeAulas(aulas);
+            Console.WriteLine("Aula modelando está no índice " + Array.IndexOf(aulas, aulaModelando));
+            Console.WriteLine(Array.LastIndexOf(aulas, aulaModelando));
 
-            //removendo o último elemento (redimensionando o array)
-            Array.Resize(ref aulas, aulas.Length - 1);
-            Console.WriteLine();
-            Console.WriteLine("Quantidade: " + aulas.Length + " aulas");
-            ImprimeAulas(aulas);
-            //Adicionando uma nova posição no final do array
-            Array.Resize(ref aulas, aulas.Length + 1);
-            Console.WriteLine();
-            Console.WriteLine("Quantidade: " + aulas.Length + " aulas");
-            ImprimeAulas(aulas);
-            //Preenchendo a posição final com um valor
+            Array.Reverse(aulas);
+            Imprimir(aulas);
+
+            Array.Reverse(aulas);
+            Imprimir(aulas);
+
+            Array.Resize(ref aulas, 2);
+            Imprimir(aulas);
+
+            Array.Resize(ref aulas, 3);
+            Imprimir(aulas);
+
             aulas[aulas.Length - 1] = "Conclusão";
-            ImprimeAulas(aulas);
+            Imprimir(aulas);
 
             Array.Sort(aulas);
-            Console.WriteLine();
-            Console.WriteLine("Depois de ordenado:");
-            ImprimeAulas(aulas);
+            Imprimir(aulas);
 
-            var copia = new string[aulas.Length - 1];
-            Array.Copy(aulas, 1, copia, 0, aulas.Length - 1);
-            aulas = copia;
-            ImprimeAulas(aulas);
+            string[] copia = new string[2];
+            Array.Copy(aulas, 1, copia, 0, 2);
+            Imprimir(copia);
+
+            string[] clone = aulas.Clone() as string[];
+            Imprimir(clone);
+
+            Array.Clear(clone, 1, 2);
+            Imprimir(clone);
 
         }
 
-        private static void ImprimeAulas(string[] aulas)
+        private static void Imprimir(string[] aulas)
         {
-            Console.WriteLine();
-            foreach (var aula in aulas)
+            Console.Clear();
+            //foreach (var aula in aulas)
+            //{
+            //    Console.WriteLine(aula);
+            //}
+
+            for (int i = 0; i < aulas.Length; i++)
             {
-                Console.WriteLine(aula);
+                Console.WriteLine(aulas[i]);
             }
         }
     }

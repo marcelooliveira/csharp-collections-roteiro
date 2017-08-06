@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A101Mapas
+namespace A41Dicionario
 {
     class Curso
     {
