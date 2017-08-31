@@ -36,6 +36,7 @@ namespace A91LINQOperadoresEncadeados
 
             query = query.Select(n => n.ToUpper());
 
+            Console.WriteLine("OPERADORES ENCADEADOS");
             query = nomes
                 .Where(n => n.Contains("o"))
                 .OrderBy(n => n.Length)
