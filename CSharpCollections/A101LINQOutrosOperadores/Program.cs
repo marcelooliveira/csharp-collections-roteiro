@@ -12,32 +12,34 @@ namespace A101LINQOutrosOperadores
         {
             string[] meses = { "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro" };
 
-            // operadores de elementos:
+            Console.WriteLine("Pegar o primeiro trimestre");
+            Imprimir(meses.Take(3));
 
-            Console.WriteLine(meses.First());
-            Console.WriteLine(meses.Last());
+            Console.WriteLine("Pegar os meses depois do primeiro trimestre");
+            Imprimir(meses.Skip(3));
 
-            Console.WriteLine(meses.ElementAt(1));
-            Console.WriteLine(meses.OrderBy(m => m).First());
-            Console.WriteLine(meses.OrderBy(m => m).Skip(1).First());
+            Console.WriteLine("Pegar os meses do terceiro trimestre");
+            Imprimir(meses.Skip(6).Take(3));
 
-            // operadores de agregação
+            Console.WriteLine("Pegar os meses até que o mês comece com a letra 's'");
+            Imprimir(meses.TakeWhile(m => !m.StartsWith("s")));
 
-            Console.WriteLine(meses.Count());
-            Console.WriteLine(meses.Min());
-
-            // quantificadores
-
-            Console.WriteLine(meses.Contains("março"));
-            Console.WriteLine(meses.Any());
-            Console.WriteLine(meses.Any(m => m.StartsWith("m")));
+            Console.WriteLine("Pular os meses até que o mês comece com a letra 's'");
+            Imprimir(meses.SkipWhile(m => !m.StartsWith("s")));
 
             // operadores de conjuntos
+            string[] seq1 = { "janeiro", "fevereiro", "março"};
+            string[] seq2 = { "fevereiro", "MARÇO", "abril" };
+            Console.WriteLine();
 
-            string[] seq1 = { "janeiro", "fevereiro", "março" };
-            string[] seq2 = { "outubro", "novembro", "dezembro" };
+            Console.WriteLine("concatenando duas sequências");
             Imprimir(seq1.Concat(seq2));
+
+            Console.WriteLine("união de duas sequências");
             Imprimir(seq1.Union(seq2));
+
+            Console.WriteLine("união de duas sequências com comparador IgnoreCase");
+            Imprimir(seq1.Union(seq2, StringComparer.CurrentCultureIgnoreCase));
         }
 
         private static void Imprimir(IEnumerable<string> consulta)
