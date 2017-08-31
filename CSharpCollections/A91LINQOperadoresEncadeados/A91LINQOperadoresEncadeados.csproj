@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8B3385F2-0A24-4514-97F6-595C33915799}</ProjectGuid>
+    <ProjectGuid>{13D1608B-FF98-4628-AD7B-B6E54B2773F1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>A91NocoesLINQ</RootNamespace>
     <AssemblyName>A91NocoesLINQ</AssemblyName>
