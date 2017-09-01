@@ -6,5 +6,6 @@ continuar com o próximo capítulo.
 
 # Opinião
 
-Com o conhecimento da hospedagem estática no Amazon S3, podemos aprender a trabalhar com o AWS através do terminal, 
+Nesta aula vimos bastante sobre coleções auto-ordenadas, que são alternativas às coleções de dicionário e conjuntos que vimos no primeiro curso de C# collections.
+Vamos começar a aprender sobre arrays multidimensionais, que alternativas aos arrays simples que vimos no primeiro curso, 
 mas isso fica para o próximo capítulo!

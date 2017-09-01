@@ -1,37 +1,36 @@
-# Titulo do Exercício
+# SortedList
 
 Enunciado
 =========
-.
-.
-.
-.
-.
-.
-.
 
-A. Alternativa a [CORRETA]
+Você sabe como um `SortedList` funciona internamente? 
 
-	Isso aí!
+A. É um dicionário que implementa a interface `IDictionary <TKey, TValue>` [CORRETA]
+
+> Isso aí! A classe `SortedList` funciona como um dicionário e implementa a 
+> interface `IDictionary <TKey, TValue>` e não `IList<T>`.
 
 
 
 
-B. Alternativa b
+B. É uma lista que implementa a interface `IList<T>`.
 
-	Ops! alternativa errada porque blablablablablaba
-
-
-
-
-C. Alternativa c
-
-	Ops! alternativa errada porque blablablablablaba
+> Ops! Não se deixe enganar! Apesar do nome, `SortedList` funciona como um dicionário e 
+> implementa a interface `IDictionary <TKey, TValue>` e não `IList<T>`.
 
 
 
 
-D. Alternativa d
+C. É uma lista ligada que implementa a interface `IList<T>`
 
-	Ops! alternativa errada porque blablablablablaba
+> Ops! A classe `SortedList` não é uma lista ligada, que não armazena elementos como nós (`LinkedListNode`)
+> . Em vez disso, `SortedList` é um armazenamento chave-valor, como um dicionário.
+
+
+
+
+D. É um conjunto ordenado que implementa a interface `ISet<T>`
+
+> Ops! `SortedList` é um armazenamento chave-valor, e não um conjunto, por isso não implementa
+>  a interface `ISet<T>`.
 
