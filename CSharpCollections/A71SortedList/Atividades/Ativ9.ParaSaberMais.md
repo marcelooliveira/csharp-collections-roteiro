@@ -1,5 +1,7 @@
-PARA SABER MAIS
-===============
+PARA SABER MAIS: COMPLEXIDADE DE TEMPO
+======================================
+
+Nível: Avançado
 
 A classe genérica `SortedDictionary` é uma árvore de busca binária com "comportamento de recuperação de dados"
 expresso na notação de complexidade `O(log n)`, onde n é o número de elementos no dicionário.

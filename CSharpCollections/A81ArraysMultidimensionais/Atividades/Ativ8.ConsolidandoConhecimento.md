@@ -6,5 +6,6 @@ continuar com o próximo capítulo.
 
 # Opinião
 
-Com o conhecimento da hospedagem estática no Amazon S3, podemos aprender a trabalhar com o AWS através do terminal, 
-mas isso fica para o próximo capítulo!
+Com o conhecimento sobre matrizes multidimensionais e matrizes denteadas, expandimos bastante nosso conhecimento sobre arrays!
+Agora podemos começar a explorar o mundo mágico das consultas poderosas do LINQ - Language Integrated Queries, ou Consultas Integradas à Linguagem.
+Mas isso fica para o próximo capítulo!
