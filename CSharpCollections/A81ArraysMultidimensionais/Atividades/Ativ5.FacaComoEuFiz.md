@@ -4,11 +4,11 @@ Enunciado
 =========
 Lembra da tabela de resultados de copas do mundo de futebol?
 
-ano\posição|Campeão|Vice|Terceiro Lugar
--|-|-|
-2014|Alemanha|Argentina|Holanda 
-2010|Espanha|Holanda|Alemanha 
-2006|Itália|França|Alemanha
+|ano\posição|Campeão|Vice|Terceiro Lugar|
+|-|-|-|-|
+|2014|Alemanha|Argentina|Holanda|
+|2010|Espanha|Holanda|Alemanha|
+|2006|Itália|França|Alemanha|
 
 
 Imagine uma tabela de resultados de copas do mundo, declarada como
