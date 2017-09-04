@@ -72,8 +72,8 @@ namespace System.Linq
 
 Podemos notar algumas coisas:
 
-- As extensões LINQ ficam localizadas no namespace `System.Linq`.
-- As extensões LINQ ficam localizadas na classe `Enumerable`.
+- As extensões `LINQ` ficam localizadas no namespace `System.Linq`.
+- As extensões `LINQ` ficam localizadas na classe `Enumerable`.
 - O método `Where()` retorna um valor `IEnumerable<TSource>`.
 
 Mas espere um pouco, não estamos trabalhando com array de strings? Então por que `Where` retorna `IEnumerable<TSource>`?

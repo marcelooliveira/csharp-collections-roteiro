@@ -6,5 +6,5 @@ continuar com o próximo capítulo.
 
 # Opinião
 
-Com o conhecimento da hospedagem estática no Amazon S3, podemos aprender a trabalhar com o AWS através do terminal, 
-mas isso fica para o próximo capítulo!
+Com o conhecimento básico de consultas LINQ, agora já podemos começar a var consultas um pouco mais complexas.
+Mas isso fica para o próximo capítulo!

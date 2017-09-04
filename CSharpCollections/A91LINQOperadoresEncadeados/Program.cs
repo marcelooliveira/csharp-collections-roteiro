@@ -13,7 +13,7 @@ namespace A91LINQOperadoresEncadeados
         static void Main(string[] args)
         {
             string[] nomes = { "Chaves", "Kiko", "Chiquinha", "Madruga", "Florinda", "Girafales" };
-
+            
             Console.WriteLine("CONSULTANDO DENTRO DE UM LAÇO FOREACH");
             foreach (var nome in nomes)
             {

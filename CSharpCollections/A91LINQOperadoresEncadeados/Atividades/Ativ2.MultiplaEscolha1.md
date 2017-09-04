@@ -2,36 +2,35 @@
 
 Enunciado
 =========
-.
-.
-.
-.
-.
-.
-.
+
+Que tipo de coleções podem ser usadas como fonte de dados para uma consulta **LINQ**?
 
 A. Alternativa a [CORRETA]
 
-	Isso aí!
+Qualquer coleção que implementa a interface `IEnumerable`.
 
-
+> Isso aí! Qualquer coleção que implementa a interface `IEnumerable` pode ser fonte de dados de uma consulta **LINQ**.
 
 
 B. Alternativa b
 
-	Ops! alternativa errada porque blablablablablaba
+Apenas os arrays: arrays unidimensionais, arrays multidimensionais e arrays denteados.
 
+> Ops! As listas e outros tipos de coleção também podem ser usadas como fonte de dados para uma consulta **LINQ**.
 
 
 
 C. Alternativa c
 
-	Ops! alternativa errada porque blablablablablaba
+Apenas as listas: `List`, `LinkedList` e `SortedList`. 
 
+> Ops! Os arrays e outros tipos de coleção também podem ser usadas como fonte de dados para uma consulta **LINQ**.
 
 
 
 D. Alternativa d
 
-	Ops! alternativa errada porque blablablablablaba
+Apenas os arrays e as listas.
+
+> Ops! Os dicionários, as filas, pilhas e outros tipos de coleção também podem ser usados.
 
