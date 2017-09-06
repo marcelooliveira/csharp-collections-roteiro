@@ -10,7 +10,7 @@ namespace A73SortedSet
     {
         static void Main(string[] args)
         {
-            ISet<String> alunos = new SortedSet<String>(new ComparadorMinusculo())
+            SortedSet<String> alunos = new SortedSet<String>(new ComparadorMinusculo())
             {
                 "Vanessa Tonini",
                 "Ana Losnak",
@@ -24,6 +24,12 @@ namespace A73SortedSet
             alunos.Add("FABIO GUSHIKEN");
             foreach (var a in alunos)
                 Console.WriteLine(a);
+
+            var faixaAlunos = alunos.GetViewBetween("F", "R");
+            foreach (var item in faixaAlunos)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 

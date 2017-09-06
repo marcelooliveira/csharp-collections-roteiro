@@ -19,10 +19,20 @@ namespace A71SortedList
             alunos.Add("WM",
                 new Aluno("Wanderson Macedo", 11287));
 
+            alunos["WM"] = new Aluno("Wanderson Macedo", 11287);
+
             Console.WriteLine(alunos["RN"]);
+
+            //Console.WriteLine(alunos["XX"]); //dá erro!
+            Aluno aluno = null;
+            alunos.TryGetValue("XX", out aluno);
+            Console.WriteLine(aluno);
 
             foreach (var a in alunos)
                 Console.WriteLine(a);
+
+            var index = alunos.IndexOfKey("VT");
+            Console.WriteLine(index);
 
             ///<image url="$(ProjectDir)\Slides\image1.png" scale=""/>
         }
