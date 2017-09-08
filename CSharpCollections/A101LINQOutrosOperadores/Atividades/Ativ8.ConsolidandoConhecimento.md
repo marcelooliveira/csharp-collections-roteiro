@@ -6,5 +6,5 @@ continuar com o próximo capítulo.
 
 # Opinião
 
-Com o conhecimento da hospedagem estática no Amazon S3, podemos aprender a trabalhar com o AWS através do terminal, 
-mas isso fica para o próximo capítulo!
+Com o conhecimento de consultas LINQ que conseguimos nesses dois capítulos, podemos aproveitar muito mais das coleções .NET! 
+No próximo capítulo vamos aprender sobre conversão entre coleções (e os problemas que podem acontecer no caminho!)
