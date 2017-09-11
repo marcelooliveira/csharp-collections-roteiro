@@ -10,7 +10,13 @@ namespace A101LINQOutrosOperadores
     {
         static void Main(string[] args)
         {
-            string[] meses = { "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro" };
+            var meses =
+                Enumerable
+                .Range(1, 12)
+                .Select(m => new Mes(
+                    new DateTime(2017, m, 1).ToString("MMMM"),
+                    DateTime.DaysInMonth(2017, m)
+                ));
 
             Console.WriteLine("Pegar o primeiro trimestre");
             Imprimir(meses.Take(3));
@@ -22,10 +28,10 @@ namespace A101LINQOutrosOperadores
             Imprimir(meses.Skip(6).Take(3));
 
             Console.WriteLine("Pegar os meses até que o mês comece com a letra 's'");
-            Imprimir(meses.TakeWhile(m => !m.StartsWith("s")));
+            Imprimir(meses.TakeWhile(m => !m.Nome.StartsWith("s")));
 
             Console.WriteLine("Pular os meses até que o mês comece com a letra 's'");
-            Imprimir(meses.SkipWhile(m => !m.StartsWith("s")));
+            Imprimir(meses.SkipWhile(m => !m.Nome.StartsWith("s")));
 
             // operadores de conjuntos
             string[] seq1 = { "janeiro", "fevereiro", "março"};
@@ -33,22 +39,48 @@ namespace A101LINQOutrosOperadores
             Console.WriteLine();
 
             Console.WriteLine("concatenando duas sequências");
-            Imprimir(seq1.Concat(seq2));
+            foreach (var item in seq1.Concat(seq2))
+            {
+                Console.WriteLine(item);
+            }
 
             Console.WriteLine("união de duas sequências");
-            Imprimir(seq1.Union(seq2));
+            foreach (var item in seq1.Union(seq2))
+            {
+                Console.WriteLine(item);
+            }
 
             Console.WriteLine("união de duas sequências com comparador IgnoreCase");
-            Imprimir(seq1.Union(seq2, StringComparer.CurrentCultureIgnoreCase));
+            foreach (var item in seq1.Union(seq2, StringComparer.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine(item);
+            }
         }
 
-        private static void Imprimir(IEnumerable<string> consulta)
+        private static void Imprimir(IEnumerable<Mes> consulta)
         {
             foreach (var item in consulta)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine();
+        }
+    }
+
+    class Mes
+    {
+        public Mes(string nome, int dias)
+        {
+            Nome = nome;
+            Dias = dias;
+        }
+
+        public string Nome { get; private set; }
+        public int Dias { get; private set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}", Nome, Dias);
         }
     }
 }
