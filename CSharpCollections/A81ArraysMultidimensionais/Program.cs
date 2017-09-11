@@ -12,13 +12,13 @@ namespace A81ArraysMultidimensionais
     {
         static void Main(string[] args)
         {
-            ///<image url="$(ProjectDir)\Slides\image1.png" scale=""/>
+            ///<image url="$(ProjectDir)\Slides\img1.png" scale=""/>
 
             //var resultados = new string[]
             //{
-            //    "Alemanha", "Argentina", "Holanda",
-            //    "Espanha", "Holanda", "Alemanha",
-            //    "Itália", "França", "Alemanha"
+            //    "Alemanha", "Espanha", "Itália",
+            //    "Argentina", "Holanda", "França",
+            //    "Holanda", "Alemanha", "Alemanha"
             //};
 
             //foreach (var item in resultados)
@@ -50,44 +50,36 @@ namespace A81ArraysMultidimensionais
 
 
 
-            const int COPA_2014 = 0;
-            const int COPA_2010 = 1;
-            const int COPA_2006 = 2;
-
-            const int CAMPEAO = 0;
-            const int VICE = 1;
-            const int TERCEIRO = 2;
-
-            int[] copas = new int[] { 2014, 2010, 2006 };
-
             string[,] resultados = new string[3, 3];
 
-            resultados[COPA_2014, CAMPEAO] = "Alemanha";
-            resultados[COPA_2014, VICE] = "Argentina";
-            resultados[COPA_2014, TERCEIRO] = "Holanda";
+            resultados[0, 0] = "Alemanha";
+            resultados[0, 1] = "Argentina";
+            resultados[0, 2] = "Holanda";
 
-            resultados[COPA_2010, CAMPEAO] = "Espanha";
-            resultados[COPA_2010, VICE] = "Holanda";
-            resultados[COPA_2010, TERCEIRO] = "Alemanha";
+            resultados[1, 0] = "Espanha";
+            resultados[1, 1] = "Holanda";
+            resultados[1, 2] = "Alemanha";
 
-            resultados[COPA_2006, CAMPEAO] = "Itália";
-            resultados[COPA_2006, VICE] = "França";
-            resultados[COPA_2006, TERCEIRO] = "Alemanha";
+            resultados[2, 0] = "Itália";
+            resultados[2, 1] = "França";
+            resultados[2, 2] = "Alemanha";
 
             //foreach (var selecao in resultados)
             //{
             //    Console.WriteLine(selecao);
             //}
 
-            for (int copa = resultados.GetLowerBound(0); 
-                copa <= resultados.GetUpperBound(0); 
-                copa++)
+            for (int copa = 0; copa <= resultados.GetUpperBound(0); copa++)
             {
-                Console.Write(copas[copa] + " ");
-                for (int posicao = resultados.GetLowerBound(1); 
-                    posicao <= resultados.GetUpperBound(1); posicao++)
+                int ano = 2014 - 4 * copa;
+                Console.Write(ano.ToString().PadRight(12));
+            }
+            Console.WriteLine();
+            for (int posicao = 0; posicao <= resultados.GetUpperBound(1); posicao++)
+            {
+                for (int copa = 0; copa <= resultados.GetUpperBound(0); copa++)
                 {
-                    Console.Write(resultados[copa, posicao] + " ");
+                    Console.Write(resultados[copa, posicao].PadRight(12));
                 }
                 Console.WriteLine();
             }
