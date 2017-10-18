@@ -41,6 +41,6 @@ para as chaves e outra lista para valores.
 
 F. Um `SortedDictionary` é tão rápido quanto `SortedList` se você precisa fazer alterações com frequência.
 
-	Ops! A estrutura de árvore binária balanceada de um `SortedDictionary` permite que
-    essa coleção faça alterações de elementos (inserção/remoção) mais rapidamente.
+Ops! A estrutura de árvore binária balanceada de um `SortedDictionary` permite que
+essa coleção faça alterações de elementos (inserção/remoção) mais rapidamente.
 

@@ -5,3 +5,4 @@
 - Combinando `Skip` e `Take` para obter faixas de elementos
 - Obtendo elementos consecutivos por condição com `TakeWhile`
 - Ignorando elementos consecutivos por condição com `SkipWhile`
+ 
